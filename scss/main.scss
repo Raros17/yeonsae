@@ -1,0 +1,96 @@
+//디자인 가이드
+
+@import "vars";
+@import "mixins";
+
+#main-visual {
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/bg_main_visual.jpg);
+  overflow: hidden;
+  .container {
+    color: #fff;
+    position: relative;
+    .pagination {
+      z-index: 2;
+      position: absolute;
+      bottom: 220px;
+      top: 520px;
+      .swiper-pagination-bullet {
+        background-color: rgb(255, 255, 255);
+        opacity: 0.7;
+        width: 50px;
+        height: 5px;
+        border-radius: 6px;
+        &-active {
+          background-color: rgb(255, 176, 74);
+        }
+      }
+    }
+    .main-visual-img {
+      z-index: 0;
+      width: 100%;
+      position: absolute;
+      left: 450px;
+      top: 120px;
+      img {
+        width: 1210px;
+        height: 850px;
+        border-radius: (50%);
+      }
+    }
+    h2 {
+      position: absolute;
+      left: 0;
+      top: 320px;
+      font-size: 70px;
+      font-weight: 700;
+      z-index: 3;
+    }
+    .news-title {
+      width: 400px;
+      position: absolute;
+      left: 0;
+      top: 700px;
+      word-break: keep-all;
+      h3 {
+        font-size: $h3;
+        font-weight: 700;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #ccc;
+      }
+      p {
+        margin-top: 30px;
+        line-height: 1.5;
+      }
+    }
+  }
+  .notice {
+    width: 900px;
+    position: absolute;
+    top: 750px;
+    right: -100px;
+    .notice-top {
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+      font-weight: 700;
+      strong {
+        text-transform: uppercase;
+        font-size: 20px;
+      }
+    }
+    .notice-box {
+      padding: 20px;
+      background-color: rgb(234, 234, 234);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .notice-word {
+        color: #111;
+      }
+    }
+  }
+}
