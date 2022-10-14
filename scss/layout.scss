@@ -19,6 +19,7 @@ button {
   background: none;
   border: none;
   outline: none;
+  color: inherit;
 }
 
 .container {
@@ -128,6 +129,59 @@ button {
         }
       }
     }
+  }
+}
+.util {
+  height: 120px;
+  display: flex;
+  align-items: flex-start;
+  position: absolute;
+  right: 0;
+  .language {
+    padding: 15px;
+    background-color: #ccc;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    transition: all 0.25s ease;
+
+    &:hover {
+      background-color: $main-color;
+      color: #fff;
+      ul {
+        display: block;
+      }
+    }
+    ul {
+      display: none;
+      margin: 10px 0;
+      position: absolute;
+      width: 100%;
+      background-color: $main-color;
+      left: 0;
+      li a {
+        display: block;
+        padding: 10px 0;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+    }
+    button {
+      text-transform: uppercase;
+      display: flex;
+      font-weight: 700;
+      align-items: center;
+      &:before {
+        content: "＼e894";
+        font-family: "Material Icons";
+        font-size: 24px;
+        font-weight: 400;
+      }
+    }
+  }
+  .all-menu {
+    font-size: 24px;
+    margin-left: 10px;
   }
 }
 

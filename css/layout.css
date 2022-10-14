@@ -89,6 +89,7 @@ button {
   background: none;
   border: none;
   outline: none;
+  color: inherit;
 }
 
 .container {
@@ -196,4 +197,57 @@ button {
 }
 #gnb .list > li .depth02 li a:hover {
   background-color: #034a81;
+}
+
+.util {
+  height: 120px;
+  display: flex;
+  align-items: flex-start;
+  position: absolute;
+  right: 0;
+}
+.util .language {
+  padding: 15px;
+  background-color: #ccc;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  transition: all 0.25s ease;
+}
+.util .language:hover {
+  background-color: #0467b3;
+  color: #fff;
+}
+.util .language:hover ul {
+  display: block;
+}
+.util .language ul {
+  display: none;
+  margin: 10px 0;
+  position: absolute;
+  width: 100%;
+  background-color: #0467b3;
+  left: 0;
+}
+.util .language ul li a {
+  display: block;
+  padding: 10px 0;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.util .language button {
+  text-transform: uppercase;
+  display: flex;
+  font-weight: 700;
+  align-items: center;
+}
+.util .language button:before {
+  content: "＼e894";
+  font-family: "Material Icons";
+  font-size: 24px;
+  font-weight: 400;
+}
+.util .all-menu {
+  font-size: 24px;
+  margin-left: 10px;
 }
